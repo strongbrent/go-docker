@@ -21,3 +21,5 @@ vendor/
 junk
 tmp
 
+# Ignore binary
+go-docker
