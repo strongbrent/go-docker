@@ -7,17 +7,22 @@ before_install:
 - sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
 - sudo apt-get update
 - sudo apt-get -y -o Dpkg::Options::="--force-confnew" install docker-ce
+# create log dir
+- mkdir ~/app-logs
 
 script:
-# build DEV container
-- make build-dev
+# build container
+- make build
 
-# run DEV container
-- make run-dev
+# run container
+- make run
 
-# stop DEV container
-- make stop-dev
+# stop container
+- make stop
 
-# clean DEV env
-- make clean-dev
+# clean up
+- make clean
+
+# cat log file
+- cat ~/app-logs/app.log
 
