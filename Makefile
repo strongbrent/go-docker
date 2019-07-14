@@ -6,7 +6,7 @@ build:
 	docker build -t go-docker .
 
 run:
-	docker run -d -p 8080:8080 --name go-docker go-docker
+	docker run -d -p 8080:8080 -v ~/app-logs:/go-docker/logs --name go-docker go-docker
 
 stop:
 	docker container stop go-docker
