@@ -1,15 +1,15 @@
 SHELL = /bin/bash
 
-.PHONY: build-dev run-dev stop-dev clean-dev
+.PHONY: build run stop clean
 
-build-dev:
+build:
 	docker build -t go-docker .
 
-run-dev:
-	docker run -d -p 8080:8080 --name go-docker-dev go-docker
+run:
+	docker run -d -p 8080:8080 -v ~/app-logs:/go-docker/logs --name go-docker go-docker
 
-stop-dev:
-	docker container stop go-docker-dev
+stop:
+	docker container stop go-docker
 
-clean-dev:
-	(docker rm go-docker-dev && docker rmi go-docker)
+clean:
+	(docker rm go-docker && docker rmi go-docker)
