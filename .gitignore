@@ -21,5 +21,9 @@ vendor/
 junk
 tmp
 
+# Ignore dep files
+Gopkg.*
+
 # Ignore binary
 go-docker
+
