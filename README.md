@@ -14,6 +14,8 @@ Based on this [blog](https://www.callicoder.com/docker-golang-image-container-ex
 |[go-dep](https://github.com/golang/dep)|0.5.0|
 
 ## Getting Started
+
+### Developing Locally
 If you are developing locally, then you can use `dep` to install the dependencies for this project. (See the link above for `dep` installation instructions.) Then you can build and run the app locally as follows:
 ```
 cd $GOPATH/src/github.com/<your_account>
@@ -22,4 +24,36 @@ cd go-docker
 dep init
 go build
 ./go-docker
+```
+
+To enable logging:
+```
+mkdir ~/app-logs
+```
+
+To view logs:
+```
+tail -f ~/app-logs/app.log
+```
+
+### Building and Running the Container
+You can use the `Makefile` to build, run, and clean up the container environment. For example, to build the container, run:
+```
+make build
+```
+To run and test the container:
+```
+make run
+curl http://localhost:8080?name=Your_name
+```
+And view logs as specified in the section above.
+
+To stop the container:
+```
+make stop
+```
+
+And to clean up everything, run:
+```
+make clean
 ```
