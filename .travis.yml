@@ -1,3 +1,8 @@
+language: go
+
+go:
+- 1.12.x
+
 services:
 - docker
 
@@ -9,8 +14,13 @@ before_install:
 - sudo apt-get -y -o Dpkg::Options::="--force-confnew" install docker-ce
 # create log dir
 - mkdir ~/app-logs
+# install deps
+- go get -d -v ./...
 
 script:
+# Run tests
+- make test
+
 # build container
 - make build
 
@@ -25,4 +35,3 @@ script:
 
 # cat log file
 - cat ~/app-logs/app.log
-
