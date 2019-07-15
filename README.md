@@ -2,9 +2,9 @@
 
 [![Build Status](https://travis-ci.org/strongbrent/go-docker.svg?branch=master)](https://travis-ci.org/strongbrent/go-docker)
 
-Proof of concept for running a Go web service using Docker multi-stage builds.
+Proof of concept for running a Go web service using Docker multi-stage builds.  
 
-Based on this [blog](https://www.callicoder.com/docker-golang-image-container-example/) post created by [Rajeev Singh](https://github.com/callicoder).
+Based on this [blog](https://www.callicoder.com/docker-golang-image-container-example/) post created by [Rajeev Singh](https://github.com/callicoder). However, I added some steps for basic automated testing.
 
 ## Requirements
 | Requirement | My Version | 
