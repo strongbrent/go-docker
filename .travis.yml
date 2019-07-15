@@ -15,7 +15,7 @@ before_install:
 # create log dir
 - mkdir ~/app-logs
 # install deps
-- go get ./...
+- go get -d -v ./...
 
 script:
 # Run tests
