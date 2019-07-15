@@ -11,6 +11,9 @@ before_install:
 - mkdir ~/app-logs
 
 script:
+# Run tests
+- make test
+
 # build container
 - make build
 
@@ -25,4 +28,3 @@ script:
 
 # cat log file
 - cat ~/app-logs/app.log
-

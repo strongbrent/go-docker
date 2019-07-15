@@ -1,7 +1,10 @@
 SHELL = /bin/bash
 APP_NAME = go-docker
 
-.PHONY: build run stop clean
+.PHONY: test build run stop clean
+
+test:
+	go test -v
 
 build:
 	docker build -t $(APP_NAME) .
