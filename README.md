@@ -44,7 +44,7 @@ make build
 To run and test the container:
 ```
 make run
-curl http://localhost:8080?name=Your_name
+make curl-test
 ```
 And view logs as specified in the section above.
 
