@@ -27,6 +27,9 @@ script:
 # run container
 - make run
 
+# run curl test
+- make curl-test 
+
 # stop container
 - make stop
 
